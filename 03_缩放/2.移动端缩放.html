@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width"> -->
+	<title>移动端缩放</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			width: 200px;
+			height: 150px;
+		}
+		p{
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo">
+		<img src="../imgs/1.jpg" alt="">
+		<img src="../imgs/2.jpg" alt="">
+		<img src="../imgs/3.jpg" alt="">
+		<img src="../imgs/4.jpg" alt="">
+	</div>	
+	<p id="text1"></p>
+	<p id="text2"></p>
+	<script type="text/javascript" >
+		const text1 = document.getElementById('text1')
+		const text2 = document.getElementById('text2')
+		text1.innerHTML = '布局视口'+document.documentElement.clientWidth
+		text2.innerHTML = '视觉视口'+window.innerWidth
+		setInterval(()=>{
+			text1.innerHTML = '布局视口'+document.documentElement.clientWidth
+			text2.innerHTML = '视觉视口'+window.innerWidth
+		},500)
+	</script>
+</body>
+</html>
