@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width"> -->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+	<!-- <meta name="viewport" content="maximum-scale=2.0"> -->
+	<!-- <meta name="viewport" content="minimum-scale=0.5"> -->
+	<!-- <meta name="viewport" content="user-scalable=no"> -->
+	<!-- <meta name="viewport" content="viewport-fit=cover"> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>viewport说明</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}p{
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+	<p id="text1"></p>
+	<p id="text2"></p>
+	<script type="text/javascript" >
+		const text1 = document.getElementById('text1')
+		const text2 = document.getElementById('text2')
+		text1.innerHTML = '布局视口'+document.documentElement.clientWidth
+		text2.innerHTML = '视觉视口'+window.innerWidth
+		setInterval(()=>{
+			text1.innerHTML = '布局视口'+document.documentElement.clientWidth
+			text2.innerHTML = '视觉视口'+window.innerWidth
+		},500)
+	</script>
+</body>
+</html>
