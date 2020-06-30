@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动端的视口</title>
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+		p{
+			font-size: 40px;
+		}
+		#demo{
+			width: 375px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<p id="text1"></p>
+	<p id="text2"></p>
+	<script type="text/javascript" >
+		console.log('布局视口宽度为：',document.documentElement.clientWidth);
+		console.log('视觉视口宽度为：',window.innerWidth);
+		const text1 = document.getElementById('text1')
+		const text2 = document.getElementById('text2')
+		text1.innerHTML = '布局视口宽度为：'+document.documentElement.clientWidth
+		text2.innerHTML = '视觉视口宽度为：'+window.innerWidth
+	</script>
+</body>
+</html>

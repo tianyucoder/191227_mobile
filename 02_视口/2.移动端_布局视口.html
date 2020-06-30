@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动端的视口</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#demo{
+			width: 980px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<!-- 获取移动端布局视口的宽度 -->
+	<script type="text/javascript" >
+		console.log('当前设备布局视口宽度为：',document.documentElement.clientWidth);
+	</script>
+</body>
+</html>

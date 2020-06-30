@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片的高清显示</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#demo{
+			width: 200px;
+			height: 200px;
+			background-size: 100%;
+			background-image: url('../imgs/logo.png');
+		}
+		@media screen and (-webkit-min-device-pixel-ratio:2){
+			#demo{
+				background-image: url('../imgs/logo@2x.png');
+			}
+		}
+		@media screen and (-webkit-min-device-pixel-ratio:3){
+			#demo{
+				background-image: url('../imgs/logo@3x.png');
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+</body>
+</html>
