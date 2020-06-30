@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  width: 9.2rem;
+  height: 4rem;
+  background-color: orange;
+  margin: 0.4rem;
+}

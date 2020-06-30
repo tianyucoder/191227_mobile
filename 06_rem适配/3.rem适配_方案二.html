@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#app{
+			width: 9.2rem;
+			height: 4rem;
+			background-color: orange;
+			margin: 0.4rem auto;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" >
+		function adapter (){
+			//获取当前手机设备独立像素值(因为开启了理想视口，所以布局视口=设备独立像素值)
+			const w = document.documentElement.clientWidth
+			//动态计算根字体大小
+			const rootFontSize = w / 10
+			//设置根字体大小
+			document.documentElement.style.fontSize = rootFontSize +'px'
+		}
+		adapter()
+		window.onresize = adapter
+	</script>
+	<div id="app"></div>
+</body>
+</html>
