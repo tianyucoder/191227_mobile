@@ -1,0 +1,86 @@
+@font:375/10rem;
+html,body{
+	width: 100%;
+	height: 100%;
+}
+#app{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+	#content{
+		position: absolute;
+		width: 100%;
+		background-color: orange;
+		top: 0;
+		bottom: 49/@font;
+		.content_item{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
+	}
+	#foot{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 49/@font;
+		background-color: white;
+		display: flex;
+		.foot_item{
+			margin-left: 69/@font;
+			margin-top: 3/@font;
+			.icon{
+				width: 25/@font;
+				height: 25/@font;
+				background-size: 100%;
+				margin-bottom: 2/@font;
+			}
+			.icon_text{
+				font-size: 12/@font;
+				color: #999999;
+				&.active{
+					color: #FF5200;
+				}
+			}
+			&:nth-child(1){
+				margin-left: 35/@font;
+				.icon{
+					background-image: url('../imgs/tab_home_normal.png');
+					&.active{
+						background-image: url('../imgs/tab_home_selected.png');
+					}
+				}
+			}
+			&:nth-child(2){
+				.icon{
+					background-image: url('../imgs/tab_store_normal.png');
+					&.active{
+						background-image: url('../imgs/tab_store_selected.png');
+					}
+				}
+			}
+			&:nth-child(3){
+				.icon{
+					background-image: url('../imgs/tab_activity_normal.png');
+					&.active{
+						background-image: url('../imgs/tab_activity_selected.png');
+					}
+				}
+			}
+			&:nth-child(4){
+				.icon{
+					background-image: url('../imgs/tab_mine_normal.png');
+					&.active{
+						background-image: url('../imgs/tab_mine_selected.png');
+					}
+				}
+			}
+		}
+	}
+}
