@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>移动端事件对象</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		#demo{
+			width: 100%;
+			height: 50%;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<script type="text/javascript" >
+		const demo = document.getElementById('demo')
+
+		/* demo.addEventListener('touchstart',(event)=>{
+			demo.innerHTML = '同时按下的触点数：'+event.changedTouches.length+'<br/>'
+			demo.innerHTML += '元素身上触点总数：'+event.targetTouches.length+'<br/>'
+			demo.innerHTML += '屏幕上触点总数：'+event.touches.length
+			event.preventDefault()
+		}) */
+		/* demo.addEventListener('touchmove',function(event){
+			this.style.backgroundColor = 'pink'
+			demo.innerHTML = '同时滑动的触点数：'+event.changedTouches.length+'<br/>'
+			demo.innerHTML += '元素身上触点总数：'+event.targetTouches.length+'<br/>'
+			demo.innerHTML += '屏幕上触点总数：'+event.touches.length
+			event.preventDefault()
+		}) */
+		/* demo.addEventListener('touchend',function(event){
+			this.style.backgroundColor = 'orange'
+			demo.innerHTML = '同时抬起的触点数：'+event.changedTouches.length+'<br/>'
+			demo.innerHTML += '元素身上触点总数：'+event.targetTouches.length+'<br/>'
+			demo.innerHTML += '屏幕上触点总数：'+event.touches.length
+			event.preventDefault()
+		}) */
+		demo.addEventListener('touchmove',function(event){
+			this.style.backgroundColor = 'pink'
+			this.innerHTML = event.changedTouches[0].radiusX
+			console.log(event.changedTouches[0]);
+			event.preventDefault()
+		})
+	</script>
+</body>
+</html>
