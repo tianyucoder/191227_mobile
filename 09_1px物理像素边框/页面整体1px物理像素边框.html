@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1px物理像素边框</title>
+	<style>
+		#demo{
+			width: 2rem;
+			height: 2rem;
+			background-color: skyblue;
+			margin: 0.15rem auto;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" >
+		function adapter (){
+			document.documentElement.style.fontSize = (document.documentElement.clientWidth * 100) / 375 + 'px'
+		}
+		adapter()
+		window.onresize = adapter
+		
+		//获取meta标签
+		const meta = document.querySelector('meta[name=viewport]')
+		//计算要缩小多少
+		const scale = 1 / window.devicePixelRatio
+		//更改meta标签
+		meta.setAttribute('content','width=device-width, initial-scale='+scale)
+		//获取原来的根字体大小
+		const rootFontSize = parseInt(document.documentElement.style.fontSize)
+		//更改根字体大小
+		document.documentElement.style.fontSize = rootFontSize * window.devicePixelRatio + 'px'
+	</script>
+	<div id="demo"></div>
+</body>
+</html>
