@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1px物理像素边框</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#demo{
+			width: 3.45rem;
+			height: 1.50rem;
+			background-color: skyblue;
+			margin: 0.15rem auto;
+			border: 1px solid black;
+		}
+		#demo2{
+			position: relative;
+			width: 3.45rem;
+			height: 1.50rem;
+			background-color: pink;
+			margin: 0.15rem auto;
+		}
+		#demo2::after{
+			content:'';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: black;
+			bottom: 0;
+			left: 0;
+		}
+		@media screen and (-webkit-min-device-pixel-ratio:2){
+			#demo{
+				border: 0.5px solid black;
+			}
+			#demo2::after{
+				transform: scaleY(0.5);
+			}
+		}
+		@media screen and (-webkit-min-device-pixel-ratio:3){
+			#demo{
+				border: 0.3333px solid black;
+			}
+			#demo2::after{
+				transform: scaleY(0.333);
+			}
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" >
+		function adapter (){
+			document.documentElement.style.fontSize = (document.documentElement.clientWidth * 100) / 375 + 'px'
+		}
+		adapter()
+		window.onresize = adapter
+	</script>
+	<div id="demo"></div>
+	<div id="demo2"></div>
+</body>
+</html>

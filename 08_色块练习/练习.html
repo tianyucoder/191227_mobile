@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>练习</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#top{
+			margin-top: 1.47rem;
+			width: 6.46rem;
+			height: 2.90rem;
+			margin-left: 0.5rem;
+			margin-right: 0.54rem;
+			background-color: #76D1A7;
+		}
+		#content{
+			display: flex;
+		}
+		#left{
+			width: 1.26rem;
+			height: 4.07rem;
+			background-color: #C464A5;
+			margin-top: 0.43rem;
+			margin-left: 0.5rem;
+		}
+		#right{
+			width: 4.76rem;
+			height: 6.50rem;
+			background-color: #697CC3;
+			margin-top: 0.43rem;
+			margin-left: 0.44rem;
+			margin-right: 0.54rem;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" >
+		function adapter (){
+			document.documentElement.style.fontSize = (document.documentElement.clientWidth * 100) / 750 + 'px'
+		}
+		adapter()
+		window.onresize = adapter
+	</script>
+	<div id="top"></div>
+	<div id="content">
+		<div id="left"></div>
+		<div id="right"></div>
+	</div>
+	<br/>
+</body>
+</html>
