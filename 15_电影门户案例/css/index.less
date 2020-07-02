@@ -11,7 +11,7 @@ html,body{
 	#content{
 		position: absolute;
 		width: 100%;
-		background-color: orange;
+		// background-color: rgb(15, 13, 8);
 		top: 0;
 		bottom: 49/@font;
 		.content_item{
@@ -21,6 +21,167 @@ html,body{
 			display: none;
 			&.active{
 				display: block;
+			}
+			&:nth-child(1){
+				.top{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 375/@font;
+					height: 44/@font;
+					background-color: white;
+					.left{
+						font-size: 0;
+						margin-left: 15/@font;
+						.city{
+							font-size: 12/@font;
+						}
+						.raw{
+							display: inline-block;
+							vertical-align: middle;
+							width: 7/@font;
+							height: 4/@font;
+							background-size: 100%;
+							background-image: url('../imgs/Triangle.png');
+						}
+					}
+					.center{
+						font-size: 14/@font;
+					}
+					.right{
+						margin-right: 18.9/@font;
+						width: 25/@font;
+						height: 25/@font;
+						background-size: 100%;
+						background-image: url('../imgs/nav_filter.png');
+					}
+				}
+				.banner{
+					width: 100%;
+					height: 94/@font;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.check{
+					display: flex;
+					height: 44/@font;
+					font-size: 16/@font;
+					text-align: center;
+					background-color: white;
+					.left,.right{
+						position: relative;
+						width: 50%;
+						height: 100%;
+						line-height: 44/@font;
+					}
+					.left{
+						&::after{
+							position: absolute;
+							bottom: 0;
+							left: 50%;
+							transform: translateX(-50%);
+							content:'';
+							background-color:black;
+							display: block;
+							width: 20/@font;
+							height: 2/@font;
+						}
+					}
+				}
+				.film{
+					margin-top: 11/@font;
+					width: 100%;
+					.top{
+						position: relative;
+						display: flex;
+						padding-left: 15/@font;
+						padding-top: 16/@font;
+						height: 116/@font;
+						background-color: white;
+						img{
+							width: 68/@font;
+							height: 90/@font;
+						}
+						.top_right{
+							width: 287/@font;
+							position: absolute;
+							top: 15/@font;
+							left: 93/@font;
+							.name{
+								font-size: 15/@font;
+								max-width: 160/@font;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+							}
+							.info{
+								color: #999999;
+								font-size: 12/@font;
+							}
+							.tags{
+								margin-top: 3/@font;
+								font-size: 12/@font;
+								span{
+									border-radius: 2/@font;
+								}
+								.first{
+									border: 1/@font solid #FF4E4E;
+									color:#FF4E4E ;
+								}
+								.sale{
+									border: 1/@font solid #FF8500;
+									color:#FF8500 ;
+								}
+								.star{
+									border: 1/@font solid #BC75F3 ;
+									color:#BC75F3 ;
+								}
+								.point{
+									border: 1/@font solid #6CC531;
+									color:#6CC531 ;
+								}
+							}
+							.type{
+								position: absolute;
+								top: 3/@font;
+								right: 75/@font;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								width: 42/@font;
+								height: 14/@font;
+								font-size: 12/@font;
+								border: 1/@font solid #666666;
+								border-radius: 18/@font;
+							}
+							.price{
+								position: absolute;
+								font-size: 15/@font;
+								color:#FF5200;
+								top: 1/@font;
+								right: 15/@font;
+							}
+							.buy{
+								position: absolute;
+								bottom: 10/@font;
+								right: 15/@font;
+								text-align: center;
+								width: 60/@font;
+								height: 26/@font;
+								line-height: 26/@font;
+								background-image: linear-gradient(90deg, #FF7530 0%, #FF5200 100%);
+								box-shadow: 0 2/@font 6/@font 0 #F4BEA4;
+								border-radius: 61/@font;
+								font-family: PingFangSC-Regular;
+								font-size: 14/@font;
+								color: #FFFFFF;
+								letter-spacing: 0;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -35,6 +196,7 @@ html,body{
 		.foot_item{
 			margin-left: 69/@font;
 			margin-top: 3/@font;
+			font-size: 0;
 			.icon{
 				width: 25/@font;
 				height: 25/@font;
