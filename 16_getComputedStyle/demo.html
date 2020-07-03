@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#demo{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo" style="background-color: skyblue;"></div>
+	<script type="text/javascript" >
+		const demo = document.getElementById('demo')
+		console.log(demo.style.backgroundColor);
+		console.log(demo.style.width);
+		console.log(demo.style.height);
+		console.log(getComputedStyle(demo).width);
+		console.log(getComputedStyle(demo).height);
+		console.log(getComputedStyle(demo));
+	</script>
+</body>
+</html>

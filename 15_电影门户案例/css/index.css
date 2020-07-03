@@ -38,9 +38,11 @@ body {
 }
 #app #content .content_item:nth-child(1) .top .left .city {
   font-size: 0.32rem;
+  vertical-align: middle;
 }
 #app #content .content_item:nth-child(1) .top .left .raw {
   display: inline-block;
+  margin-left: 0.13333333rem;
   vertical-align: middle;
   width: 0.18666667rem;
   height: 0.10666667rem;
@@ -107,7 +109,7 @@ body {
   height: 2.4rem;
 }
 #app #content .content_item:nth-child(1) .film .top .top_right {
-  width: 7.65333333rem;
+  width: 7.52rem;
   position: absolute;
   top: 0.4rem;
   left: 2.48rem;
